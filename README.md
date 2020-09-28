@@ -23,18 +23,25 @@ The cannot find tensorflow.contrib error means you have tensorflow 2 which remov
 1) Install python 3.5
 
 2) Run these commands on your console:
+
 cd (copy paste the repository folder address here)
+
 pip install tensorflow==1.15.0
+
 pip install -r requirements.txt
+
 export PYTHONIOENCODING=UTF-8
 
 2.5) Run this command on the console:
+
 cd /src/
 
 3) Run this command (inside the /src/ folder) if you want just random samples:
+
 python generate_unconditional_samples.py --length=20
 
 4) Run this command to have interactivity with the model (change length number to your liking):
+
 !python interactive_conditional_samples.py --length=60 --top_k=40
 
 # FAQ
