@@ -20,37 +20,32 @@ The cannot find tensorflow.contrib error means you have tensorflow 2 which remov
 
 0) Make sure you can run Tensorflow with your GPU
 
-1) Install python 3.5
+1) Install these:
+
+Anaconda 4.2 https://repo.anaconda.com/archive/
+
+Visual Tools for C++ 14 https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16
 
 2) Run these commands on your console:
 
 cd (copy paste the repository folder address here)
 
-pip install tensorflow==1.15.0
+conda install python==3.5
+
+py -m conda install tensorflow==1.5.0
+
+py -m conda install numpy
 
 pip install -r requirements.txt
 
 export PYTHONIOENCODING=UTF-8
 
-2.5) Run this command on the console:
-
 cd /src/
 
 3) Run this command (inside the /src/ folder) if you want just random samples:
 
-python generate_unconditional_samples.py --length=20
+py generate_unconditional_samples.py --length=20
 
 4) Run this command to have interactivity with the model (change length number to your liking):
 
-python interactive_conditional_samples.py --length=60 --top_k=40
-
-# FAQ
-
-It doesn't work?
-
-Try to see if you can run tensorflow on your GPU.
-(I can't test if this code works because I run it on google collab)
-
-How can I run if I don't have a GPU?
-
-Upload to your google drive account and run the TAY WORKING CODE.py inside google collab (remeber to change the %cd folder address to the root folder -right click on the folder and click copy address on the left panel of google collab-) Remember to use !python and %cd in google collab.
+py interactive_conditional_samples.py --length=60 --top_k=40
